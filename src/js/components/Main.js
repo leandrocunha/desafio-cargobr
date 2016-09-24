@@ -7,7 +7,7 @@ export default class Main extends React.Component {
 
     return (
       <div id="Main">
-		<RouteHandler />
+		    <RouteHandler />
       </div>
     );
   }
