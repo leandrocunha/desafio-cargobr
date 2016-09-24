@@ -1,17 +1,33 @@
 import React, {findDOMNode} from 'react'
+import store from 'store'
 
 export default class Sidebar extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+      this.tasks = [];
+  }  
 
   _submit(e) {
     e.preventDefault();
 
     const newTask = findDOMNode(this.refs.newTask);
-    console.log(newTask.value);
+
+    this._saveTask(newTask.value);
     this._clear(newTask);
   }
 
   _clear(input) {
     input.value = '';
+  }
+
+  _saveTask(task) {
+    this.tasks.push(task);
+    store.set('tasks', this.tasks);
   }
 
   render() {

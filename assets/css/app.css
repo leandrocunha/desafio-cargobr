@@ -154,48 +154,11 @@ body strong {
 }
 #Wrapper {
   background-color: #fff;
-  height: 50%;
-  width: 80%;
+  width: 30%;
 }
-#Wrapper #Sidebar {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 31.33333333333333%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#Wrapper #Sidebar:before,
-#Wrapper #Sidebar:after {
-  content: '';
-  display: table;
-}
-#Wrapper #Sidebar:after {
-  clear: both;
-}
-#Wrapper #Sidebar:last-child {
-  margin-right: 0%;
-}
-#Wrapper #TaskList {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 65.66666666666666%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#Wrapper #TaskList:before,
-#Wrapper #TaskList:after {
-  content: '';
-  display: table;
-}
-#Wrapper #TaskList:after {
-  clear: both;
-}
-#Wrapper #TaskList:last-child {
-  margin-right: 0%;
+#Wrapper #TaskList .task {
+  border-bottom: #000 1px solid;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=app.css.map */
