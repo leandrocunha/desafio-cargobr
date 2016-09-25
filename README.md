@@ -67,4 +67,4 @@ Sim, Stylus.
  - Clone o repositório;
  - `npm install` para instalar as dependências;
  - Edite o `baseURL` no index.html para carregar os assets corretamente;
- - Abra o index.html no browser
+ - Acesse o projeto através do seu `localhost`
