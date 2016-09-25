@@ -14,7 +14,7 @@ typedArrayTags[float32Tag]=typedArrayTags[float64Tag]=typedArrayTags[int8Tag]=ty
 
 },{}],3:[function(require,module,exports){
 (function (global){
-"use strict";LazyLoad.js([rBS.baseURL+"assets/js/vendors.js"],function(){var _=require("lodash");global.React=require("react"),_.assign(global.React,require("react-dom")),global.jQuery=require("jquery"),global.$=jQuery,LazyLoad.js([],function(){return require("./router")})});
+"use strict";LazyLoad.js([tasks.baseURL+"assets/js/vendors.js"],function(){var _=require("lodash");global.React=require("react"),_.assign(global.React,require("react-dom")),global.jQuery=require("jquery"),global.$=jQuery,LazyLoad.js([],function(){return require("./router")})});
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"./router":7,"jquery":"jquery","lodash":1,"react":"react","react-dom":"react-dom"}],4:[function(require,module,exports){
