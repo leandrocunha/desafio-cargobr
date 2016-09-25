@@ -120,7 +120,7 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  background-color: #cecece;
+  background-color: #efeeea;
   font-size: 14px;
   line-height: 20px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -131,20 +131,16 @@ body strong {
   font-variant: normal;
   font-weight: bold;
 }
+body button {
+  outline: none;
+}
 #Main {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: box;
   display: flex;
-  height: 100vh;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   -o-box-pack: center;
@@ -153,12 +149,145 @@ body strong {
   justify-content: center;
 }
 #Wrapper {
-  background-color: #fff;
   width: 30%;
 }
+#Wrapper h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  font-size: 30px;
+  margin: 30px 0;
+  text-align: center;
+}
+#Wrapper form {
+  border-bottom: #f1f1f1 1px solid;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#Wrapper form input[type=text] {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+}
+#Wrapper #TaskList {
+  margin: 0 0 50px 0;
+}
+#Wrapper #TaskList .filter {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 0 0 10px 0;
+}
+#Wrapper #TaskList .filter .status {
+  border-bottom: #f1f1f1 1px solid;
+}
+#Wrapper #TaskList .filter .status button {
+  background-color: #fff;
+  border: none;
+  border-right: #f1f1f1 1px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  width: 33.333%;
+}
+#Wrapper #TaskList .filter .status button:last-child {
+  border-right: none;
+}
+#Wrapper #TaskList .filter .status button:hover {
+  background-color: #e4e4e1;
+}
+#Wrapper #TaskList .filter .order button {
+  background-color: #fff;
+  border: none;
+  border-right: #f1f1f1 1px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 0;
+  width: 50%;
+}
+#Wrapper #TaskList .filter .order button:last-child {
+  border-right: none;
+}
+#Wrapper #TaskList .filter .order button:hover {
+  background-color: #e4e4e1;
+}
 #Wrapper #TaskList .task {
-  border-bottom: #000 1px solid;
-  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: #f1f1f1 3px solid;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 25px 20px;
+  position: relative;
+}
+#Wrapper #TaskList .task p {
+  font-size: 16px;
+}
+#Wrapper #TaskList .task p.datetime {
+  font-size: 11px;
+  margin: 10px 0 0 0;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+#Wrapper #TaskList .task .actions li.check {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+#Wrapper #TaskList .task .actions li.check:hover button {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#Wrapper #TaskList .task .actions li.check button {
+  color: #5fe228;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+}
+#Wrapper #TaskList .task .actions li.check.completed button {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#Wrapper #TaskList .task .actions li.delete {
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+#Wrapper #TaskList .task .actions li.delete:hover button {
+  color: #f3122d;
+}
+#Wrapper #TaskList .task .actions li.delete button {
+  font-size: 12px;
+}
+#Wrapper #TaskList .task .actions li button {
+  background-color: transparent;
+  border: none;
+  color: #cecece;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 /*# sourceMappingURL=app.css.map */
