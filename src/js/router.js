@@ -8,6 +8,8 @@ import Main from './components/Main';
 var render = RootComponent => ReactDOM.render(<RootComponent />,
   document.getElementById('app'));
 
+Page.base(tasks.baseURL || '/');
+
 Page.set(render)
  .with(Main)
   .on(
